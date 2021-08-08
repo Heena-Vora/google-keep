@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Google Keep</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="index.css">
+  </link>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"
+    integrity="sha512-Tn2m0TIpgVyTzzvmxLNuqbSJH3JP8jm+Cy3hvHrW7ndTDcJ1w5mBiksqDBb8GpE2ksktFvDB/ykZ0mDpsZj20w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+  <div id="user-view" style="display: none;">
+    <div id="mySidenav" class="sidenav">
+      <div id="sidenav-menu-top">
+        <div class="btn-wrapper btn-menu btn-logo-top">
+          <span>
+            <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+          </span>
+        </div>
+        <div class="btn-home btn-logo-top">
+          <img class="logo"
+            src="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png" /><span>Keep</span>
+        </div>
+      </div>
+      <br />
+      <a class="btn-wrapper btn-menu btn-side-nav active">
+        <span>
+          <i class="fa fa-lightbulb fa-lg" aria-hidden="true"></i>
+        </span>
+        <span class="label">Notes</span>
+      </a>
+      <a class="btn-wrapper btn-menu btn-side-nav">
+        <span>
+          <i class="fa fa-trash fa-lg" aria-hidden="true"></i>
+        </span>
+        <span class="label">Trash</span>
+      </a>
+    </div>
+    <div id="main">
+      <nav>
+        <div class="search-bar">
+          <div class="btn-wrapper btn-search">
+            <span>
+              <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+            </span>
+          </div>
+          <input type="text" name="search" />
+          <div class="btn-wrapper btn-cancel">
+            <span>
+              <i class="fa fa-times  fa-lg" aria-hidden="true"></i>
+            </span>
+          </div>
+        </div>
+        <div class="profile-bar">
+          <div id="usernameText"></div>
+          <div id="logoutBtn" class="btn-wrapper btn-cancel">
+            <span>
+              <i class="fa fa-power-off fa-lg" aria-hidden="true"></i>
+            </span>
+          </div>
+        </div>
+      </nav>
+      <main id="notes-main">
+        <section id="empty-note">
+          <div>
+            Take a note
+          </div>
+        </section>
+        <div class="absolute-sections" style="display: none;" id="form-container">
+          <form id="form" class="modal-content" autocomplete="off">
+            <input type="text" id="note-title" placeholder="Title">
+            <textarea rows="3" draggable="false" type="text" id="note-text" placeholder="Note"></textarea>
+            <div id="form-buttons">
+              <button type="submit" class="btn-wrapper btn-primary" id="submit-button">Save</button>
+              <button type="button" class="btn-wrapper btn-secondary" id="form-close-button">Close</button>
+            </div>
+          </form>
+        </div>
+        <div id="notes"></div>
+      </main>
+    </div>
+  </div>
+
+
+  <div id="anonymous-view">
+    <div id="ano-content">
+      <h1>Google Keep</h1>
+      <h3>Save your thoughts, wherever you are</h3>
+      <p>Add notes, lists, photos, and audio to Keep.</p>
+      <button id="tryKeepBtn" class="btn-wrapper btn-primary">Try Google Keep</button>
+    </div>
+    <section class="absolute-sections" style="display: none;" id="login-modal">
+      <div class="modal-content">
+        <div class="input-wrapper">
+          <label>Your name:</label>
+          <input class="input" id="username" name="username" />
+        </div>
+        <div class="input-wrapper">
+          <button id="loginBtn" class="btn-wrapper btn-primary">Login</button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
